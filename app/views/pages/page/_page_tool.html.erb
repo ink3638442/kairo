@@ -1,0 +1,31 @@
+<div class="row page-tool clear-margin">
+  <div class="page-tool-left clear-padding col-xs-4">
+    <%= link_to controller: 'pages', action: 'page_share', id: page do %>
+      <div class= "btn btn-sm btn-outline btn-primary">
+        <i class="fa fa-random"> Share</i>
+      </div>
+    <% end %>
+  </div>  
+  <div class="page-tool-center clear-padding col-xs-4">
+    <% if current_user?(page.user) %>
+      <%= link_to edit_page_path(page), 
+        class: "btn btn-outline btn-default btn-sm" do %>
+        <i class="fa fa-pencil"></i>
+      <% end %>
+      <%= link_to page, method: :DELETE, data: { confirm: "<strong>#{page.title}</strong>を削除してよろしいですか？<br>( ページを構成しているカード自体は削除されません )",
+                                                          "commit" => "削除する",
+                                                          "cancel" => "キャンセル",
+                                                          }, title: "ページ削除の確認",
+        class: "btn btn-outline btn-default btn-sm" do %>
+        <i class="fa fa-trash-o"></i>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="page-tool-right clear-padding col-xs-4">
+      <i class="second fa fa-sort-amount-desc"></i>
+      工程数
+      <span class="label label-default">
+        <%= page.cards.count %>
+      </span>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<li id="card-<%= card.id %>" class="card col-lg-4 col-md-6 col-sm-12 col-xs-12">
+  <%= link_to card, data: {target: '#card-modal'}, remote: true do %>
+    <%= render 'cards/card/card_update', card: card %>
+    <div class="product-box">
+      <%= render 'cards/card/card_title', card: card %>
+      <hr>
+      <%= render 'cards/card/card_content', card: card %>
+      <hr>
+      <%= render 'cards/card/page_info', card: card %>
+      <hr>
+      <%= render 'cards/card/card_tool', card: card %>
+    </div>
+  <% end %>
+</li>

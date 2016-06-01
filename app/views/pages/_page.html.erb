@@ -1,0 +1,14 @@
+<li id="page-<%= page.id %>" class="page col-lg-6 col-md-12">
+  <%= link_to user_page_path(@user, page) do %>
+    <%= render 'pages/page/page_update', page: page %>
+    <div class="product-box">
+      <%= render 'pages/page/page_title', page: page %>
+      <hr>
+      <%= render 'pages/page/page_content', page: page %>
+      <hr>
+      <%= render 'pages/page/group_info', page: page %>
+      <hr>
+      <%= render 'pages/page/page_tool', page: page %>
+    </div>
+  <% end %>
+</li>

@@ -1,0 +1,22 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for(@group_thread) do |f| %>
+      <div class="modal-header">
+        <h4 class="modal-title">新規スレッド作成</h4>
+      </div>
+      <div class="modal-body">
+        <div class="field">
+          <%= render 'shared/error_messages', object: f.object %>
+          <%= f.label :title, "タイトル", class: "form-label" %>
+          <%= f.text_field :title, class: "form-control", placeholder: "(50文字まで)" %>
+          <%= f.label :content, "内容", class: "form-label" %>
+          <%= f.text_area :content, class: "form-control", rows: "5" %>
+        </div>
+      </div>
+        <div class="modal-footer">
+          <%= f.submit "作成", class: "btn btn-primary block full-width m-b" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

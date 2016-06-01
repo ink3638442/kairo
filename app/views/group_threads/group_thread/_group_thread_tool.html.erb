@@ -1,0 +1,21 @@
+<div class="row group-thread-tool clear-margin">
+  <div class="group-thread-tool-left clear-padding col-xs-4">
+  </div>  
+  <div class="group-thread-tool-center clear-padding col-xs-4">
+    <% if current_user?(group_thread.user) %>
+      <%= link_to edit_group_thread_path(group_thread), 
+        class: "btn btn-outline btn-default btn-sm" do %>
+        <i class="fa fa-pencil"></i>
+      <% end %>
+      <%= link_to group_thread, method: :DELETE, data: { confirm: "<strong>#{page.title}</strong>を削除してよろしいですか？",
+                                                          "commit" => "削除する",
+                                                          "cancel" => "キャンセル",
+                                                          }, title: "ページ削除の確認",
+        class: "btn btn-outline btn-default btn-sm" do %>
+        <i class="fa fa-trash-o"></i>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="group-thread-tool-right clear-padding col-xs-4">
+  </div>
+</div>

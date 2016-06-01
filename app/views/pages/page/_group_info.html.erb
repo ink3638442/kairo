@@ -1,0 +1,13 @@
+<div class="group-info">
+  <% if page.group_id.present? %>
+    &nbsp;
+    <%= link_to page.group do %>
+      <i class="second fa fa-rocket"></i>
+      [ <%= page.group.name %> ]
+    <% end %>
+  <% else %>
+    &nbsp;
+    <i class="second fa fa-rocket"></i>
+    [ 該当ページなし ]
+  <% end %>
+</div>

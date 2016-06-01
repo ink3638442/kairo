@@ -1,0 +1,15 @@
+<li id="group-<%= group.id %>" class="group clear-padding col-lg-6 col-md-12">
+  <%= link_to user_group_path(@user, group) do %>
+    <%= render 'groups/group/group_update', group: group %>
+    <div class="product-box">
+      <%= render 'groups/group/group_name', group: group %>
+      <hr>
+      <%= render 'groups/group/group_user_list', group: group %>
+      <hr>
+      <%= render 'groups/group/group_info', group: group %>
+    </div>
+  <% end %>
+  <ol class="pages clear-padding">
+    <%= render 'pages/group/page_de', page: default_page_set(group) %>
+  </ol>
+</li>

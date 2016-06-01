@@ -1,0 +1,12 @@
+<div class="card">
+  <%= render 'cards/card/card_update', card: @card %>
+  <div class="product-box">
+    <%= render 'cards/card/card_title', card: @card %>
+    <hr class="first-hr">
+    <%= render 'cards/card/card_content_show', card: @card %>
+    <hr>
+    <%= render 'cards/card/page_info', card: @card %>
+    <hr>
+    <%= render 'cards/card/card_tool', card: @card %>
+  </div>
+</div>

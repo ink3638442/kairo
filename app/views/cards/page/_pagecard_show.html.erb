@@ -1,0 +1,10 @@
+<li id="card-<%= card.id %>" class="pagecard">
+  <%= link_to card, data: {target: '#card-modal'}, remote: true do %>
+    <%= render 'cards/card/card_update', card: card %>
+    <div class="product-box">
+      <%= render 'cards/card/card_title', card: card %>
+      <hr class="first-hr">
+      <%= render 'cards/card/card_content_show', card: card %>
+    </div>
+  <% end %>
+</li>

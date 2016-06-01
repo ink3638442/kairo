@@ -1,0 +1,25 @@
+<div class="card-content">
+  <% if card.kind == 'program' %>
+    <div class="fa-container">
+      <i class="fa fa-file-code-o fa-4x"></i>
+    </div>
+  <% elsif card.kind == 'cad' %>
+    <div class="fa-container">
+      <i class="fa fa-codepen fa-4x"></i>
+    </div>
+  <% elsif card.kind == 'other' %>
+    <div class="fa-container">
+      <i class="fa fa-cubes fa-4x"></i>
+    </div>
+  <% else %>
+    <% if card.image? %>
+      <div class="img-container">
+        <%= image_tag(card.image) %>
+      </div>
+    <% else %>
+      <div class="text-container">
+        <%= simple_format(card.content) %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

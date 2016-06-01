@@ -1,0 +1,8 @@
+<div class="ibox-content">
+  <% page_card_order(@page, @page.cards.count) %>
+  <ol class="pagecards_show clear-padding">
+    <% @pagecards.each do |card| %>
+      <%= render 'cards/page/pagecard_show', card: card %>
+    <% end %>
+  </ol>
+</div>

@@ -1,0 +1,50 @@
+<div class="row border-bottom">
+  <nav class="navbar navbar-fixed-top white-bg" role="navigation" style="margin-bottom: 0">
+    <%= link_to root_path do %>
+      <div class="navbar-header" id="logo">
+        <%= image_tag "icon.png", size: "27x27", class: "icon" %> KAIRO
+      </div>
+    <% end %>
+    <ul class="nav navbar-top-links navbar-right">
+      <li>
+        <div class="form-group form-inline">
+          <%= form_for(:home, url: home_search_path) do |f| %>
+            <%= f.text_field :keyword, placeholder: "作り方を検索： ロボット", class: "form-control", size: "30X300" %>
+            <%= f.submit "検索", class: "btn btn-danger"%>
+          <% end %>
+        </div>
+      </li>
+      <li>
+        <%= link_to root_path do %>
+        <i class="fa fa-home"></i>
+        <span class="nav-label" data-i18n="nav.dashboard">Home</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to new_card_path(nav_info: @kind) do %>
+        <i class="fa fa-th"></i>
+        <span class="nav-label" data-i18n="nav.dashboard">カード作成</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to new_page_path do %>
+        <i class="fa fa-th-large"></i>
+        <span class="nav-label" data-i18n="nav.dashboard">ページ作成</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to edit_user_path(current_user)  do %>
+        <i class="fa fa-gears"></i>
+        <span class="nav-label" data-i18n="nav.dashboard">アカウント設定</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to logout_path, method: "delete" do %>
+        <i class="fa fa-power-off"></i>
+        <span class="nav-label" data-i18n="nav.dashboard">ログアウト</span>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
+  <%= render 'shared/flash' %>
+</div>

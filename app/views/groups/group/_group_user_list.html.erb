@@ -1,0 +1,12 @@
+<div class="user-box">
+  <ol class="clearfix clear-margin clear-padding">
+    <% @users = group.users.uniq %>
+    <% @users.each do |user| %>
+      <li id="user-<%= user.id %>" class="user-list clear-padding clearfix">
+        <%= link_to user_groups_path(user) do %>
+          <%= render 'users/user', user: user %>
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+</div>

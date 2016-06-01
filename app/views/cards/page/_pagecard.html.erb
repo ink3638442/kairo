@@ -1,0 +1,35 @@
+<li id="card-<%= card.id %>" class="pagecard">
+  <%= link_to card, data: {target: '#card-modal'}, remote: true do %>
+    <div class="product-box <%= card.kind %>-border <%= card.kind %> box-row">
+      <div class="box-column">
+        <div class="card-title">
+          <%= card.title %>
+        </div>
+        <div class="card-content">
+          <%=raw trimming_content(card) %>
+        </div>
+      </div>
+      <div class="img-container card-image">
+        <% if card.kind == 'program' %>
+          <div class="fa-container">
+            <i class="fa fa-file-code-o fa-2x"></i>
+          </div>
+        <% elsif card.kind == 'cad' %>
+          <div class="fa-container">
+            <i class="fa fa-codepen fa-2x"></i>
+          </div>
+        <% elsif card.kind == 'other' %>
+          <div class="fa-container">
+            <i class="fa fa-cubes fa-2x"></i>
+          </div>
+        <% else %>
+          <% if card.image.present? %>
+            <%= image_tag(card.image) %>
+          <% else %>
+            <div class="no-image">no-image</div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</li>

@@ -1,0 +1,5 @@
+<% if card.pick_up == false %>
+  <%= render 'cards/pick_up/up', card: card.id %>
+<% else %>
+  <%= render 'cards/pick_up/uped', card: card.id %>
+<% end %>

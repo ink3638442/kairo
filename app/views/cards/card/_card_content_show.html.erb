@@ -1,0 +1,12 @@
+<div class="card-content">
+  <% if card.image? && card.kind != 'program' && card.kind != 'cad' && card.kind != 'other' %>
+    <div class="img">
+      <%= image_tag(card.image) %>
+    </div>
+  <% end %>
+  <% if card.content? %>
+    <div class="text-container">
+      <%= simple_format card.content %>
+    </div>
+  <% end %>
+</div>

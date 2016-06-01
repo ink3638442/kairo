@@ -1,0 +1,50 @@
+<div class="page-new row">
+  <div class="left-window col-xs-5">
+    <div class="full-height-scroll">
+      <ul class="notes clearfix clear-margin clear-padding">
+        <li>
+          <div>
+            <h4><strong>ピックアップを利用する</strong></h4>
+            <p>下のピックアップしたカードを</p>
+            <p>ドラッグ＆ドロップして</p>
+            <p>ページを作成できます。</p>
+            <a><i class="fa fa-share-square-o fa-4x "></i></a>
+          </div>
+        </li>
+      </ul>
+      <ol id="sortable-left" class="pagecards clear-padding connectedSortable">
+        <!--パーシャル _pickup_card-->
+        <% if @left_cards.present? %>
+          <% @left_cards.each do |card| %>
+            <%= render 'cards/page/pickup_card', card: card %>
+          <% end %>
+        <% end %>
+        <!--_pickup_card パーシャル-->
+      </ol>
+    </div>
+  </div>
+  <div class="col-xs-7 clear-padding">
+    <div class="right-window full-height-scroll">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <%= form_for @page do |f| %>
+            <%= f.submit "ページを作成する", class: "btn btn-primary btn-block btn-md btn-outline" %>
+            <%= f.label :title, "タイトル", class: "title-label" %>
+            <%= f.text_field :title, class: "form-group form-control", placeholder: "(例) LEDフラッシャー" %>
+            <%= f.label :content, "内容" %>
+            <%= f.text_area :content, class: "form-group form-control", rows: "5" %>
+            <%= f.hidden_field :card_order %>
+          <% end %>
+        </div>
+      </div>
+      <ul id="sortable-right" class="pagecards connectedSortable dd-empty">
+        <!--sortabelコンテンツ挿入場所-->
+        <% if @right_cards.present? %>
+          <% @right_cards.each do |card| %>
+            <%= render 'cards/page/pickup_card', card: card %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

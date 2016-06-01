@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAIRO</title>
+
+  <!-- Main css styles -->
+  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!-- Main javascript files -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
+
+</head>
+<body class="md-skin fixed-nav fixed-sidebar">
+
+  <!-- Wrapper-->
+  <div id="wrapper">
+
+    <!-- Navigation -->
+    <%= render 'layouts/navigation' %>
+
+    <!-- Page wraper -->
+    <div id="page-wrapper" class="gray-bg">
+
+      <!-- Page wrapper -->
+      <%= render 'layouts/topnavbar' %>
+      <!-- Main view  -->
+      <div class="modal fade" id="card-modal" tabindex="-1" aria-hidden="true">
+        <!--render partial view-->
+      </div>
+      
+      <%= yield %>
+    </div>
+    <!-- End page wrapper-->
+
+  </div>
+  <!-- End wrapper-->
+  
+</body>
+
+</html>

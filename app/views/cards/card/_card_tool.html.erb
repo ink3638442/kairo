@@ -1,0 +1,31 @@
+<div class="row card-tool clear-margin">
+  <div class="card-tool-left clear-padding col-xs-4">
+    <%= link_to controller: 'cards', action: 'card_share', id: card.id do %>
+      <div class= "btn btn-sm btn-outline btn-primary">
+        <i class="fa fa-random"> Share</i>
+      </div>
+    <% end %>
+  </div>  
+  <div class="card-tool-center clear-padding col-xs-4">
+    <% if current_user?(card.user) %>
+    <%= link_to edit_card_path(card, nav_info: @kind), 
+      class: "btn btn-outline btn-default btn-sm" do %>
+      <i class="fa fa-pencil"></i>
+    <% end %>
+    <%= link_to card, method: :DELETE, data: { confirm: "<strong>#{card.title}</strong>を削除してよろしいですか？<br>( ページを構成しているカードの場合はご注意ください )",
+                                                        "commit" => "削除する",
+                                                        "cancel" => "キャンセル",
+                                                        }, title: "ページ削除の確認",
+      class: "btn btn-outline btn-default btn-sm" do %>
+      <i class="fa fa-trash-o"></i>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="card-tool-right clear-padding col-xs-4">
+    <% if card.page_id.nil? %>
+      <div class="result-<%= card.id %>">
+        <%= render 'cards/pick_up/pick_up', card: card %>
+      </div>
+    <% end %>
+  </div>
+</div>

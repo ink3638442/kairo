@@ -1,0 +1,17 @@
+<div class="groups-index">
+  <div class="ibox">
+    <div class="group-index-count">
+      <h3>
+        グループ一覧
+        &nbsp;
+        (<%= @user.groups.count %>)
+      </h3>
+    </div>
+  </div>
+  <%= will_paginate @groups %>
+  <!--グループリスト-->
+  <ol class="groups row clear-padding">
+    <%= render @groups %>
+  </ol>
+  <%= will_paginate @groups %>
+</div>

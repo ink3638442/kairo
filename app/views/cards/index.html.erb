@@ -1,0 +1,16 @@
+<div class="cards-index">
+  <div class="ibox">
+    <div class="card-index-count">
+      <h3>
+        <%= @kind_name %>一覧
+        &nbsp;
+        (<%= card_counter(@kind) %>)
+      </h3>
+    </div>
+  </div>
+  <%= will_paginate @cards %>
+  <ol class="cards row clear-padding">
+    <%= render @cards %>
+  </ol>
+  <%= will_paginate @cards %>
+</div>

@@ -1,0 +1,21 @@
+<div class="social-footer">
+  <div class="social-comment">
+    <ol class="thread_contents clear-padding">
+      <% @thread_contents.each do |thread_content| %>
+        <% if @thread_content.id.present? %>
+        <%= render 'thread_contents/thread_content', thread_content: thread_content %>
+        <% end %>
+      <% end %>
+    </ol>
+    <div class="pull-left">
+      <%= image_tag current_user.image %>
+    </div>
+    <div class="media-body">
+      <%= form_for @thread_content do |f| %>
+        <%= f.text_area :content, class: "form-group form-control", rows: "2", placeholder: "Write comment..." %>
+        <% hidden_field :group_thread_id, :group_thread_id %>
+        <%= f.submit "投稿", class: "btn btn-primary btn-block btn-md btn-outline" %>
+      <% end %>
+    </div>
+  </div>
+</div>

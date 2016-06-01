@@ -1,0 +1,15 @@
+<div class="searchs-index">
+ <div class="ibox">
+   <div class="search-index-count">
+    <h3>
+    <%= '"' + @keyword + '"' %>
+    検索結果
+    &nbsp;
+    (<%= @pages.count %>)
+    </h3>
+   </div>
+  </div>
+  <ol class="pages row clear-padding">
+    <%= render @pages %>
+  </ol>
+</div>

@@ -1,0 +1,27 @@
+<div class="ibox-content">
+  <% page_card_order(page, 10) %>
+  <ol class="pagecards clear-padding">
+    <% @pagecards.each do |card| %>
+      <%= render 'cards/page/pagecard', card: card %>
+    <% end %>
+    <% if page.cards.count > 10 %>
+      <div class="rest">
+        <div>・</div>
+        <div>・</div>
+        <div>・</div>
+      </div>
+    <% end %>
+    <% if page.cards.count <= 10 %>
+      <div class="dummycards">
+        <% (10 - page.cards.count).times do %>
+          <%= render 'cards/page/dummycard' %>
+        <% end %>
+        <div class="rest">
+          <div>・</div>
+          <div>・</div>
+          <div>・</div>
+        </div>
+      </div>
+    <% end %>
+  </ol>
+</div>

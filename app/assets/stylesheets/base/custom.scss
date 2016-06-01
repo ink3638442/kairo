@@ -1,0 +1,1501 @@
+@import url(https://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
+@import url(https://fonts.googleapis.com/css?family=Raleway:200italic);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400italic);
+////////////////////////
+//common
+////////////////////////
+#logo {
+  font-family: 'Raleway', sans-serif;
+    padding-top: 14px;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    .icon {
+      margin-top: -3px;
+      margin-right: -3px;
+    }
+}
+.dropdown-menu {
+  min-width: 115px;
+}
+.clear-padding {
+  padding: 0;
+}
+.clear-margin {
+  margin: 0
+}
+.alert {
+  margin: 0;
+}
+.user-name {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  height: 65px;
+  color: white;
+  text-align: center;
+  background-color: #ED5565;
+  padding: 22px;
+  z-index: -100;
+  font-size: 16px;
+}
+.nav-header {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  height: 220px;
+}
+.alert {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+#error_explanation {
+  ul {
+    padding-left: 30px;
+  }
+  li {
+    color: #a94442;
+    margin: 10px 0;
+  }
+  
+}
+.modal-body {
+  p {
+    line-height: 300%;
+    margin: 0;
+  }
+}
+.breadboard {
+  background-color: #ffefef !important;
+}
+.circuit {
+  background-color: #eff7ff !important;
+}
+.description {
+  background-color: #ffffef !important;
+}
+.element_list {
+  background-color: #efffef !important;
+}
+.program {
+  background-color: #f7efff !important;
+}
+.cad {
+  background-color: #D6E3F0 !important;
+}
+.other {
+  background-color: #f9f9f9 !important;
+}
+.breadboard-border {
+  border-left: 5px solid #c0392b !important;
+}
+.circuit-border {
+  border-left: 5px solid #2980b9 !important;
+}
+.description-border {
+  border-left: 5px solid #f39c12 !important;
+}
+.element_list-border {
+  border-left: 5px solid #27ae60 !important;
+}
+.program-border {
+  border-left: 5px solid #8e44ad !important;
+}
+.cad-border {
+  border-left: 5px solid #2c3e50 !important;
+}
+.other-border {
+  border-left: 5px solid #7f8c8d !important;
+}
+.first-hr {
+  padding-bottom: 30px;
+  background: #f8f8f9;
+}
+////////////////////////
+//form
+////////////////////////
+.pattern {
+  width: 100%;
+  height: 100%;
+  background: image-url("pattern.png");
+  // opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.top-video {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.loginColumns {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 100px 20px 20px 20px;
+  position: relative;
+  z-index: 3;
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 720%;
+    // margin: 50px;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+  }
+  h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .ibox-content {
+    opacity: 0.8;
+    border: 1px solid #fff;
+    background: #AAA;
+    margin-bottom: 10px;
+    .form-label {
+      color: #fff;
+    }
+    small {
+      color: #fff;
+    }
+    hr {
+      border: 1px dashed #fff;
+    }
+    .random_p {
+      text-align: center;
+      color: #fff;
+    }
+    .sign_up {
+      text-align: center;
+      color: #fff;
+      margin: 5px;
+    }
+  }
+}
+.form-label {
+  margin: 20px 0 10px;
+}
+.submit-margin {
+  margin-top: 30px;
+}
+.demo-submit-margin {
+  padding: 20px 0px;
+  margin: 5px 0 10px;
+}
+.pv {
+  text-align: right;
+  .text-color {
+    color: #fff;
+  }
+}
+.navbar-top-links {
+  .form-group {
+    margin-right: 10px;
+  }
+  .form-control {
+    display: inline-block !important;
+    margin-right: 8px;
+  }
+}
+////////////////////////
+//card
+////////////////////////
+#card-modal {
+  a {
+    color: #666;
+  }
+  .card {
+    width: 50%;
+    margin: 100px auto;
+    .card-update {
+      text-align: right;
+      margin-bottom: 3px;
+      .date-tab {
+        border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+        -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+        background: white;
+        padding: 7px 3%;
+      }
+    }
+    .product-box {
+      position: relative;
+      z-index: 1;
+      background-color: white;
+      .card-title {
+        padding: 10px  3%;
+        text-align: left;
+      }
+      .card-content {
+        text-align: center;
+        background: #f8f8f9;
+        color: #666;
+        .img {
+          height: 500px;
+          padding: 25px 0;
+          width: 100%;
+        }
+        .text-container {
+          padding: 30px  3%;
+        }
+      }
+      hr {
+        margin: 0px;
+        border: 0;
+        border-top: 1px dashed #aaa;
+      }
+      .page-info {
+        padding: 3px 3%;
+        text-align: right;
+      }
+      .card-tool {
+        padding: 15px  3%;
+        .card-tool-left {
+          text-align: left;
+        }
+        .card-tool-center {
+          text-align: center;
+        }
+        .card-tool-right {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+.cards-index {
+  margin: 0 20px;
+  .card-index-count {
+    background: white;
+    margin: 75px 0;
+    padding: 25px 20px 20px;
+  }
+  .cards {
+    margin: 0 -25px;
+    list-style: none;
+    a {
+      color: #666;
+    }
+    .card {
+      padding: 0 25px 40px 25px;
+      .card-update {
+        text-align: right;
+        margin-bottom: 3px;
+        .date-tab {
+          border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+          -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+          -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+          margin-right: 1px;
+          background: white;
+          padding: 7px 3%;
+        }
+      }
+      .product-box {
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        .card-title {
+          padding: 10px  3%;
+          text-align: left;
+        }
+        .card-content {
+          background: #f8f8f9;
+          color: #666;
+          .fa-container {
+            display:flex;
+            -webkit-align-items: center;
+            -webkit-justify-content: center; 
+            align-items: center; /*上下中央*/
+            justify-content: center; /*左右中央*/
+            height: 250px;
+            width: 100%;
+            padding:  3% 10%;
+            font-weight: 400;
+            .fa {
+            padding: 100px 0;
+            }
+          }
+          .img-container {
+            height: 250px;
+          }
+          .text-container {
+            display:flex;
+            -webkit-align-items: flex-start;
+            -webkit-justify-content: center; 
+            align-items: center; /*上下中央*/
+            justify-content: flex-start; /*左右中央*/
+            height: 250px;
+            width: 100%;
+            padding:  3% 10%;
+            font-weight: 400;
+            .fa {
+            padding: 100px 0;
+            }
+          }
+        }
+        hr {
+          margin: 0px;
+          border: 0;
+          border-top: 1px dashed #aaa;
+        }
+        .page-info {
+          padding: 3px 3%;
+          text-align: right;
+        }
+        .card-tool {
+          padding: 15px  3%;
+          .card-tool-left {
+            text-align: left;
+          }
+          .card-tool-center {
+            text-align: center;
+          }
+          .card-tool-right {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+.pagecards {
+  list-style: none;
+  a {
+    color: #666;
+  }
+  .pagecard {
+    .product-box {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+    .img-container {
+      height: 100px;
+    }
+    .no-image {
+      color: #999;
+      font-style: italic;
+    }
+    .box-row {
+      height: 100px;
+      display: flex;
+      flex-flow: row;
+    }
+    .box-column {
+      display: flex;
+      flex-flow: column;
+      flex: 1;
+    }
+    .card-title {
+      flex-grow: 1;
+      font-weight: 900;
+      display:flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center; 
+      align-items: center; /*上下中央*/
+      justify-content: center; /*左右中央*/
+      border-bottom: 1px dashed #ccc;
+    }
+    .card-content {
+      flex-grow: 2;
+      padding: 5px  3%;
+      display:flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center; 
+      align-items: center; /*上下中央*/
+      justify-content: center; /*左右中央*/
+      }
+    .card-image {
+      color: #666;
+      background: #eaeaea;
+      width: 100px;
+      height: 100px;
+      display:flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center; 
+      align-items: center; /*上下中央*/
+      justify-content: center; /*左右中央*/
+    }
+  }
+}
+.dummycards {
+  .dummycard {
+    .product-box {
+      position: relative;
+      z-index: 1;
+    }
+    .img-container {
+      height: 100px;
+    }
+    .no-image {
+      color: #999;
+      font-style: italic;
+    }
+    .box-row {
+      height: 100px;
+      display: flex;
+      flex-flow: row;
+    }
+    .box-column {
+      display: flex;
+      flex-flow: column;
+      flex: 1;
+    }
+    .card-title {
+      flex-grow: 1;
+      font-weight: 900;
+      display:flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center; 
+      align-items: center; /*上下中央*/
+      justify-content: center; /*左右中央*/
+      border-bottom: 1px dashed #ccc;
+    }
+    .card-content {
+      flex-grow: 2;
+      padding: 5px  3%;
+      display:flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center; 
+      align-items: center; /*上下中央*/
+      justify-content: center; /*左右中央*/
+      }
+    .card-image {
+      color: #666;
+      background: #eaeaea;
+      width: 100px;
+      height: 100px;
+      display:flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center; 
+      align-items: center; /*上下中央*/
+      justify-content: center; /*左右中央*/
+    }
+  }
+  visibility : hidden;
+}
+.pagecards_show {
+  list-style: none;
+  a {
+    color: #666;
+  }
+  .pagecard {
+    margin-bottom: 60px;
+    .card-update {
+      text-align: right;
+      margin-bottom: 3px;
+      .date-tab {
+        border: 1px solid #ddd;
+        border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+        -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+        -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+        background: white;
+        padding: 7px 3%;
+      }
+    }
+    .product-box {
+      position: relative;
+      z-index: 1;
+      .card-title {
+        padding: 10px  3%;
+        text-align: left;
+      }
+      .card-content {
+        background: #f8f8f9;
+        color: #666;
+        text-align: center;
+        .img {
+          height: 500px;
+          padding: 25px 0;
+          width: 100%;
+        }
+        .text-container {
+          padding: 30px  3%;
+        }
+      }
+    }
+  }
+}
+////////////////////////
+//page
+////////////////////////
+.pages-index {
+  margin: 0 20px;
+  .page-index-count {
+    background: white;
+    margin: 75px 0;
+    padding: 25px 20px 20px;
+  }
+  .pages {
+    margin: 0 -25px;
+    list-style: none;
+    a {
+      color: #666;
+    }
+    .page {
+      padding: 0 25px 60px 25px;
+      .page-update {
+        text-align: right;
+        margin-bottom: 3px;
+        .date-tab {
+          border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+          -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+          -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+          margin-right: 1px;
+          background: white;
+          padding: 7px 3%;
+        }
+      }
+      .product-box {
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        .page-title {
+          padding: 10px  3%;
+          text-align: left;
+        }
+        .ibox-heading {
+          min-height: 100px;
+          padding: 25px  3%;
+        }
+        .ibox-content {
+          padding: 25px  3% 15px;
+          .rest {
+            font-weight: 900;
+            text-align: center;
+            font-size: 10px;
+          }
+        }
+        hr {
+          margin: 0px;
+          border: 0;
+          border-top: 1px dashed #aaa;
+        }
+        .group-info {
+          padding: 3px 3%;
+          text-align: right;
+        }
+        .page-tool {
+          padding: 15px  3%;
+          .page-tool-left {
+            text-align: left;
+          }
+          .page-tool-center {
+            text-align: center;
+          }
+          .page-tool-right {
+            padding-top: 6px;
+            text-align: right;
+          }
+        }
+      }
+    } 
+  }
+}
+.page-show {
+  margin: 60px 20px;
+  a {
+    color: #666;
+  }
+  .page-update {
+    text-align: right;
+    margin-bottom: 3px;
+    .date-tab {
+      border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+      -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+      -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+      margin-right: 1px;
+      background: white;
+      padding: 7px 3%;
+    }
+  }
+  .product-box {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    .page-title {
+      padding: 10px  3%;
+      text-align: left;
+    }
+    .ibox-heading {
+      min-height: 100px;
+      padding: 25px  3%;
+    }
+    .ibox-content {
+      padding: 40px  3% 15px;
+    }
+    hr {
+      margin: 0px;
+      border: 0;
+      border-top: 1px dashed #aaa;
+    }
+    .group-info {
+      padding: 3px 3%;
+      text-align: right;
+    }
+    .page-tool {
+      padding: 15px  3%;
+      .page-tool-left {
+        text-align: left;
+      }
+      .page-tool-center {
+        text-align: center;
+      }
+      .page-tool-right {
+        padding-top: 6px;
+        text-align: right;
+      }
+    }
+  }
+}
+.page-new {
+  .no-image {
+    color: #999;
+    font-style: italic;
+  }
+  .left-window {
+    .full-height-scroll {
+      padding: 0 50px;
+      #sortable-left { 
+        list-style-type: none;
+        padding-left: 0px;
+        min-height: 100%;
+        overflow: hidden;
+        li {
+          width: 100%;
+          padding: 0px;
+        }
+      }
+      ul.notes li {
+        width: 100%;
+        margin: 0px;
+        div {
+          margin: 50px auto;
+          height: 250px;
+          width: 250px;
+          color: #666;
+          strong {
+            background: linear-gradient(transparent 10%, rgb(255, 170, 170) 80%);
+          }
+          h4 {
+            margin-bottom: 20px
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      .ui-sortable-placeholder {
+      border: 1px dashed #000;
+      visibility: visible;
+      background-color: #f9fcff;
+      height: 100px;
+      }
+      .box-row {
+        margin: 25px 0;
+      }
+    }
+  }
+  .right-window {
+    padding: 0 50px;
+    border-left: dashed 2px #f99;
+    .btn-md {
+      margin-bottom: 25px;
+    }
+    #sortable-right {
+      list-style-type: none;
+      width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+    }
+    .ibox {
+      margin-bottom: 0px;
+      margin-top: 20px;
+    }
+    .dd-empty {
+      background-color: #EFEBEA;
+      border: none;
+    }
+    .ui-sortable-placeholder {
+      border: 1px dashed #000;
+      visibility: visible;
+      background-color: #f9fcff;
+      height: 200px;
+    }
+    .pagecards {
+      .ibox {
+        margin: 0px 0 2px 0 ;
+        list-style: none;
+        text-decoration: none;
+        hr {
+              margin: 0px;
+              border: 0;
+              border-top: 1px dashed #ccc;
+            }
+        a {
+              color: #666;
+            }
+        .img-container {
+          height: 200px;
+        }
+      }
+      .box-row {
+        height: 200px;
+        display: flex;
+        flex-flow: row;
+      }
+      .box-column {
+        display: flex;
+        flex-flow: column;
+        flex: 1;
+      }
+      .card-title {
+        flex-grow: 1;
+        font-weight: 900;
+        display:flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center; 
+        align-items: center; /*上下中央*/
+        justify-content: center; /*左右中央*/
+        border-bottom: 2px dashed #ccc;
+        h4 {
+          font-size: 16px;
+        }
+        small {
+          fon-size: 12px
+        }
+      }
+      .card-content {
+        flex-grow: 4;
+        padding: 5px  3%;
+        display:flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center; 
+        align-items: center; /*上下中央*/
+        justify-content: center; /*左右中央*/
+      }
+      .card-image {
+        color: #666;
+        background: #eaeaea;
+        width: 200px;
+        height: 200px;
+        display:flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center; 
+        align-items: center; /*上下中央*/
+        justify-content: center; /*左右中央*/
+      }
+    }
+  }
+}
+.page-edit {
+  .no-image {
+    color: #999;
+    font-style: italic;
+  }
+  .left-window {
+    .full-height-scroll {
+      padding: 0 50px;
+      #edit_sortable-left { 
+        list-style-type: none;
+        padding-left: 0px;
+        min-height: 100%;
+        overflow: hidden;
+        li {
+          width: 100%;
+          padding: 0px;
+        }
+      }
+      ul.notes li {
+        width: 100%;
+        margin: 0px;
+        div {
+          margin: 50px auto;
+          height: 250px;
+          width: 250px;
+          color: #666;
+          strong {
+            background: linear-gradient(transparent 10%, rgb(255, 170, 170) 80%);
+          }
+          h4 {
+            margin-bottom: 20px
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      .ui-sortable-placeholder {
+      border: 1px dashed #000;
+      visibility: visible;
+      background-color: #f9fcff;
+      height: 100px;
+    }
+      .box-row {
+        margin: 25px 0;
+      }
+    }
+  }
+  .right-window {
+    padding: 0 50px;
+    border-left: dashed 2px #f99;
+    .btn-md {
+      margin-bottom: 25px;
+    }
+    #edit_sortable-right {
+      list-style-type: none;
+      width: 100%;
+      min-height: 100%;
+    }
+    overflow: hidden;
+    .ibox {
+      margin-bottom: 0px;
+      margin-top: 20px;
+    }
+    .dd-empty {
+      background-color: #EFEBEA;
+      border: none;
+    }
+    .ui-sortable-placeholder {
+      border: 1px dashed #000;
+      visibility: visible;
+      background-color: #f9fcff;
+      height: 200px;
+    }
+    .pagecards {
+      .ibox {
+        margin: 0px 0 2px 0 ;
+        list-style: none;
+        text-decoration: none;
+        hr {
+              margin: 0px;
+              border: 0;
+              border-top: 1px dashed #ccc;
+            }
+        a {
+              color: #666;
+            }
+        .img-container {
+          height: 200px;
+        }
+      }
+      .box-row {
+        height: 200px;
+        display: flex;
+        flex-flow: row;
+      }
+      .box-column {
+        display: flex;
+        flex-flow: column;
+        flex: 1;
+      }
+      .card-title {
+        flex-grow: 1;
+        font-weight: 900;
+        display:flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center; 
+        align-items: center; /*上下中央*/
+        justify-content: center; /*左右中央*/
+        border-bottom: 2px dashed #ccc;
+        h4 {
+          font-size: 16px;
+        }
+        small {
+          fon-size: 12px
+        }
+      }
+      .card-content {
+        flex-grow: 4;
+        padding: 5px  3%;
+        display:flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center; 
+        align-items: center; /*上下中央*/
+        justify-content: center; /*左右中央*/
+      }
+      .card-image {
+        color: #666;
+        background: #eaeaea;
+        width: 200px;
+        height: 200px;
+        display:flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center; 
+        align-items: center; /*上下中央*/
+        justify-content: center; /*左右中央*/
+      }
+    }
+  }
+}
+////////////////////////
+//group
+////////////////////////
+.groups-index {
+  margin: 0 20px;
+  .group-index-count {
+    background: white;
+    margin: 75px 0;
+    padding: 25px 20px 20px;
+  }
+  .groups {
+    margin: 25px -25px;
+    list-style: none;
+    a {
+      color: #666;
+    }
+    .group {
+      padding: 0 25px 0px;
+      .group-update {
+        text-align: right;
+        margin-bottom: 3px;
+        .date-tab {
+          border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+          -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+          -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+          margin-right: 1px;
+          background: white;
+          padding: 7px 3%;
+        }
+      }
+      .product-box {
+        margin-bottom: 5px;
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        .group-name {
+          padding: 10px  3%;
+          text-align: left;
+        }
+        hr {
+          margin: 0px;
+          border: 0;
+          border-top: 1px dashed #aaa;
+        }
+        .user-box {
+          background-color: #FBF7F3;
+          padding: 10px  3% 5px;
+        }
+        .user-list {
+          list-style: none;
+          margin: 8px;
+          float: left;
+          .user-image {
+            height: 50px;
+            width: 50px;
+          }
+        }
+        .group-info {
+          text-align: center;
+          padding: 5px 10px 10px;
+        }
+        .page-count {
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+        }
+      }
+      .pages {
+        margin: 0 -25px;
+        list-style: none;
+        a {
+          color: #666;
+        }
+        .page {
+          padding: 0 25px 60px 25px;
+          .page-update {
+            display: none;
+          }
+          .product-box {
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            background-color: white;
+            .page-title {
+              padding: 10px  3%;
+              text-align: left;
+            }
+            .ibox-heading {
+              min-height: 100px;
+              padding: 25px  3%;
+            }
+            .ibox-content {
+              padding: 25px  3% 15px;
+              .rest {
+                font-weight: 900;
+                text-align: center;
+                font-size: 10px;
+              }
+            }
+            hr {
+              margin: 0px;
+              border: 0;
+              border-top: 1px dashed #aaa;
+            }
+            .group-info {
+              padding: 3px 3%;
+              text-align: right;
+            }
+            .page-tool {
+              padding: 15px  3%;
+              .page-tool-left {
+                text-align: left;
+              }
+              .page-tool-center {
+                text-align: center;
+              }
+              .page-tool-right {
+                padding-top: 6px;
+                text-align: right;
+              }
+            }
+          }
+        } 
+      }
+    }
+  }
+}
+.groups-show {
+  margin: 67px 20px;
+  .left-window {
+    padding-right: 25px;
+    .group {
+      list-style: none;
+      a {
+        color: #666;
+      }
+      .group-update {
+        text-align: right;
+        margin-top: 6px;
+        margin-bottom: 3px;
+        .date-tab {
+          border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+          -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+          -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+          margin-right: 1px;
+          background: white;
+          padding: 7px 3%;
+        }
+      }
+      .product-box {
+        margin-bottom: 5px;
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        .group-name {
+          padding: 10px  3%;
+          text-align: left;
+        }
+        hr {
+          margin: 0px;
+          border: 0;
+          border-top: 1px dashed #aaa;
+        }
+        .user-box {
+          background-color: #FBF7F3;
+          padding: 10px 15px 10px;
+        }
+        .user-list {
+          list-style: none;
+          margin: 8px;
+          float: left;
+          .user-image {
+            height: 50px;
+            width: 50px;
+          }
+        }
+        .group-info {
+          text-align: center;
+          padding: 5px 10px 10px;
+        }
+        .page-count {
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+        }
+      }
+      .page-update {
+        display: none;
+      }
+      .default-pages {
+        margin: 0 -25px;
+        list-style: none;
+        a {
+          color: #666;
+        }
+        .page {
+          padding: 0 25px 60px 25px;
+          .page-update {
+            display: none;
+          }
+          .product-box {
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            background-color: white;
+            .page-title {
+              padding: 10px  3%;
+              text-align: left;
+            }
+            .ibox-heading {
+              min-height: 100px;
+              padding: 25px  3%;
+            }
+            .ibox-content {
+              padding: 25px  3% 15px;
+              .rest {
+                font-weight: 900;
+                text-align: center;
+                font-size: 10px;
+              }
+            }
+            hr {
+              margin: 0px;
+              border: 0;
+              border-top: 1px dashed #aaa;
+            }
+            .group-info {
+              padding: 3px 3%;
+              text-align: right;
+            }
+            .group-user-info {
+              height: 50px;
+              padding: 15px  3% 0;
+              text-align: right;
+              .name {
+                padding: 10px;
+              }
+              .user-image {
+                margin-top: -10px;
+                height: 40px;
+                width: 40px;
+              }
+            }
+            .page-tool {
+              padding: 15px  3%;
+              .page-tool-left {
+                text-align: left;
+              }
+              .page-tool-center {
+                text-align: center;
+              }
+              .page-tool-right {
+                padding-top: 6px;
+                text-align: right;
+              }
+            }
+          }
+        } 
+      }
+    }
+    .pages {
+      margin: 0 -25px;
+      list-style: none;
+      a {
+        color: #666;
+      }
+      .page {
+        padding: 0 25px 60px 25px;
+        .page-update {
+          text-align: right;
+          margin-bottom: 3px;
+          .date-tab {
+            border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+            -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+            -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+            margin-right: 1px;
+            background: white;
+            padding: 7px 3%;
+          }
+        }
+        .product-box {
+          position: relative;
+          z-index: 1;
+          background-color: white;
+          .page-title {
+            padding: 10px  3%;
+            text-align: left;
+          }
+          .ibox-heading {
+            min-height: 100px;
+            padding: 25px  3%;
+          }
+          .ibox-content {
+            padding: 25px  3% 15px;
+            .rest {
+              font-weight: 900;
+              text-align: center;
+              font-size: 10px;
+            }
+          }
+          hr {
+            margin: 0px;
+            border: 0;
+            border-top: 1px dashed #aaa;
+          }
+          .group-info {
+            padding: 3px 3%;
+            text-align: right;
+          }
+          .group-user-info {
+            height: 50px;
+            padding: 15px  3% 0;
+            text-align: right;
+            .name {
+              padding: 10px;
+            }
+            .user-image {
+              margin-top: -10px;
+              height: 40px;
+              width: 40px;
+            }
+          }
+          .page-tool {
+            padding: 15px  3%;
+            .page-tool-left {
+              text-align: left;
+            }
+            .page-tool-center {
+              text-align: center;
+            }
+            .page-tool-right {
+              padding-top: 6px;
+              text-align: right;
+            }
+          }
+        }
+      } 
+    }
+  }
+  .right-window {
+    a {
+      color: #666;
+    }
+    padding-left: 25px;
+    border-left: 2px dashed #f99;
+    .threads {
+      // margin-top: 50px;
+      .thread-btn {
+        margin: 0 0 30px 0;
+      }
+      .thread-update {
+        margin-top: 6px;
+        text-align: right;
+        margin-bottom: 3px;
+        .date-tab {
+          border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+          -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+          -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+          margin-right: 1px;
+          background: white;
+          padding: 7px 3%;
+        }
+      }
+      .product-box {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 50px;
+        .title {
+          background: white;
+          padding: 10px  3%;
+          text-align: left;
+        }
+        .user-box {
+          background-color: #FBF7F3;
+          padding: 10px 15px 10px;
+        }
+        .user-list {
+          list-style: none;
+          margin: 8px;
+          float: left;
+          .user-image {
+            height: 50px;
+            width: 50px;
+          }
+        }
+        .info {
+          background:white;
+          padding: 5px 10px 10px;
+          text-align: center;
+          .thre{
+            border-left: 1px solid #ccc;
+          }
+        }
+        hr {
+          margin: 0px;
+          border: 0;
+          border-top: 1px dashed #aaa;
+        }
+      }
+    }
+  }
+}
+////////////////////////
+//group_threads
+////////////////////////
+// .group-threads-show {
+//   margin: 60px 20px;
+//   a {
+//     color: #666;
+//   }
+//   .group-thread-update {
+//     text-align: right;
+//     margin-bottom: 3px;
+//     .date-tab {
+//       border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+//       -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+//       -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+//       margin-right: 1px;
+//       background: white;
+//       padding: 7px 3%;
+//     }
+//   }
+//   .social-feed-box {
+//     position: relative;
+//     z-index: 1;
+//     background-color: white;
+//     .group-thread-title {
+//       padding: 10px  3%;
+//       text-align: left;
+//     }
+//     .social-body {
+//       min-height: 100px;
+//       padding: 25px  3%;
+//     }
+//     .social-footer {
+//       .social-comment {
+        
+//       }
+//     }
+//     hr {
+//       margin: 0px;
+//       border: 0;
+//       border-top: 1px dashed #aaa;
+//     }
+//   }
+// }
+.thread {
+  margin-top: 50px;
+  .thre-update {
+    text-align: right;
+    margin-bottom: 3px;
+    .date-tab {
+      border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+      -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+      -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+      margin-right: 1px;
+      background: white;
+      padding: 7px 3%;
+    }
+  }
+  .product-box {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    .thre-title {
+      padding: 10px  3%;
+      text-align: left;
+    }
+    .chat-discussion {
+      height: 500px;
+      .img-container {
+        width: 40px;
+        height: 40px;
+        // margin-top: 25px;
+      }
+      .right {
+        .message {
+          text-align: left;
+        }
+      }
+    }
+    .chat-users {
+      height: 500px;
+      .img-container {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+////////////////////////
+//search
+////////////////////////
+.searchs-index {
+  margin: 0 20px;
+  .search-index-count {
+    background: white;
+    margin: 75px 0;
+    padding: 25px 20px 20px;
+  }
+  .pages {
+    margin: 0 -25px;
+    list-style: none;
+    a {
+      color: #666;
+    }
+    .page {
+      padding: 0 25px 60px 25px;
+      .page-update {
+        text-align: right;
+        margin-bottom: 3px;
+        .date-tab {
+          border-radius: 7px 7px 0 0;        /* CSS3草案 */  
+          -webkit-border-radius: 7px 7px 0 0;    /* Safari,Google Chrome用 */  
+          -moz-border-radius: 7px 7px 0 0;   /* Firefox用 */
+          margin-right: 1px;
+          background: white;
+          padding: 7px 3%;
+        }
+      }
+      .product-box {
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        .page-title {
+          padding: 10px  3%;
+          text-align: left;
+        }
+        .ibox-heading {
+          min-height: 100px;
+          padding: 25px  3%;
+        }
+        .ibox-content {
+          padding: 25px  3% 15px;
+          .rest {
+            font-weight: 900;
+            text-align: center;
+            font-size: 10px;
+          }
+        }
+        hr {
+          margin: 0px;
+          border: 0;
+          border-top: 1px dashed #aaa;
+        }
+        .group-info {
+          padding: 3px 3%;
+          text-align: right;
+        }
+        .page-tool {
+          padding: 15px  3%;
+          .page-tool-left {
+            text-align: left;
+          }
+          .page-tool-center {
+            text-align: center;
+          }
+          .page-tool-right {
+            padding-top: 6px;
+            text-align: right;
+          }
+        }
+      }
+    } 
+  }
+}

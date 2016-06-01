@@ -1,0 +1,12 @@
+<div class="group-thread-user-info">
+  <%= link_to group_thread.user do %>
+    <span class="name">
+      <%= group_thread.user.name %>
+    </span>
+  
+    <div class="pull-right img-container user-image img-circle">
+      <%= image_tag group_thread.user.image %>
+    </div>
+    <%#= render 'users/user', user: page.user %>
+  <% end %>
+</div>

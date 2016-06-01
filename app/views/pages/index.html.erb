@@ -1,0 +1,16 @@
+<div class="pages-index">
+  <div class="ibox">
+    <div class="page-index-count">
+      <h3>
+        ページ一覧
+        &nbsp;
+        (<%= @user.pages.count %>)
+      </h3>
+    </div>
+  </div>
+  <%= will_paginate @pages %>
+  <ol class="pages row clear-padding">
+    <%= render @pages %>
+  </ol>
+  <%= will_paginate @pages %>
+</div>

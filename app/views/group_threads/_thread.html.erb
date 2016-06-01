@@ -1,0 +1,46 @@
+<li>
+<% num = Random.rand(3 .. 8) %>
+<% @users = @group.users.limit(num).shuffle %>
+<%= link_to group_threads_thre_path(title: title, users: @users) do %>
+  <div class="thread-update">
+    <span class="date-tab">
+      <i class="fa fa-clock-o"></i>
+      Updated
+      &nbsp;
+      <%= Date.today.strftime("%Y-%m-%d") %>
+    </span>
+  </div>
+  <div class="product-box">
+    <div class="title">
+      <span class="label label-primary pull-right">NEW</span>
+      <i class="fa fa-list-ul"></i>
+      <%= title %>
+    </div>
+    <hr>
+    <div class="user-box">
+      <ol class="clearfix clear-margin clear-padding">
+        <% @users.each do |user| %>
+          <li id="user-<%= user.id %>" class="user-list clear-padding clearfix">
+            <!--ユーザーアイコン表示-->
+            <%= link_to user_groups_path(user) do %>
+              <%= render 'users/user', user: user %>
+            <% end %>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+    <hr>
+    <div class="info">
+      <div class="row m-t-sm">
+        <div class="col-sm-6">
+          <div class="font-bold">ユーザー数</div>
+          <%= num %>
+        </div>
+        <div class="col-sm-6 thre">
+          <div class="font-bold">コメント数</div>
+          <%= Random.rand(18 .. 98) %>
+        </div>
+      </div>
+  </div>
+<% end %>
+</li>

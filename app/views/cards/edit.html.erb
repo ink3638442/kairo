@@ -1,0 +1,29 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for(@card, html: { multipart: true }) do |f| %>
+      <div class="modal-header">
+        <h4 class="modal-title">カード編集</h4>
+      </div>
+      <div class="modal-body">
+        <div class="field">
+          <%= render 'shared/error_messages', object: f.object %>
+          <%= f.label :kind, "種類", class: "form-label form-select" %><br>
+          <%= f.select :kind, [["回路図", "circuit"],["ブレッドボード", "breadboard"],
+                               ["部品リスト", "element_list"],["説明", "description"],
+                               ["プログラム", "program"],["CAD", "cad"],["その他", "other"]],
+                               :selected => @kind, class: "form-group" %><br>
+          <%= f.label :title, "タイトル", class: "form-label" %>
+          <%= f.text_field :title, class: "form-control", placeholder: "(50文字まで)" %>
+          <%= f.label :image, "アップロードファイル", class: "form-label"%>
+          <%= f.file_field :image, class: "dropify form-control" %>
+          <%= f.label :content, "メモ", class: "form-label" %>
+          <%= f.text_area :content, class: "form-control", rows: "5" %>
+        </div>
+      </div>
+        <div class="modal-footer">
+          <%= f.submit "更新", class: "btn btn-success block full-width m-b" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

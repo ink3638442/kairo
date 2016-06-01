@@ -1,0 +1,106 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+      <li class="nav-header clear-padding">
+        <%= image_tag @user.image %>
+      </li>
+      <li class="user-name clear-margin">
+        <%= @user.name %>
+      </li>
+      <li class="<%= is_active_controller('groups') %>">
+        <%= link_to user_groups_path(@user) do %>
+        <i class="fa fa-rocket"></i>
+        <span class="nav-label" data-i18n="nav.dashboard">グループ一覧</span>
+        <span class="label label-default pull-right">
+          <%= @user.groups.count %>
+        </span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('pages') %>">
+        <%= link_to user_pages_path(@user) do %>
+        <i class="fa fa-th-large"></i>
+        <span class="nav-label" data-i18n="nav.dashboard">ページ一覧</span>
+        <span class="label label-default pull-right">
+          <%= @user.pages.count %>
+        </span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('cards') %>">
+      <a href="">
+        <i class="fa fa-th"></i>
+        <span class="nav-label" data-i18n="nav.dashboard">カード一覧</span>
+        <span class="fa arrow"></span>
+      </a>
+      <ul class="nav nav-second-level collapse <%= is_active_action('index') %>">
+      <li class="<%= is_active_nav('circuit') %>">
+        <%= link_to user_cards_path(@user, nav_info: "circuit") do %>
+        <i class="fa fa-crosshairs"></i>
+        <span class="nav-label">回路図</span>
+        <span class="label label-default pull-right">
+          <%= card_counter("circuit") %>
+        </span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_nav('breadboard') %>">
+        <%= link_to user_cards_path(@user, nav_info: "breadboard") do %>
+        <i class="fa fa-building-o"></i>
+        <span class="nav-label">ブレッドボード</span>
+        <span class="label label-default pull-right">
+        <%= card_counter("breadboard") %>
+        </span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_nav('element_list') %>">
+        <%= link_to user_cards_path(@user, nav_info: "element_list") do %>
+        <i class="fa fa-list-alt"></i>
+        <span class="nav-label">部品リスト</span>
+        <span class="label label-default pull-right">
+          <%= card_counter("element_list") %>
+        </span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_nav('description') %>">
+        <%= link_to user_cards_path(@user, nav_info: "description") do %>
+        <i class="fa fa-sort-alpha-asc"></i>
+        <span class="nav-label">説明</span>
+        <span class="label label-default pull-right">
+          <%= card_counter("description") %>
+        </span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_nav('program') %>">
+        <%= link_to user_cards_path(@user, nav_info: "program") do %>
+        <i class="fa fa-file-code-o"></i>
+        <span class="nav-label">プログラム</span>
+        <span class="label label-default pull-right">
+          <%= card_counter("program") %>
+        </span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_nav('cad') %>">
+        <%= link_to user_cards_path(@user, nav_info: "cad") do %>
+        <i class="fa fa-codepen"></i>
+        <span class="nav-label">CAD</span>
+        <span class="label label-default pull-right">
+          <%= card_counter("cad") %>
+        </span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_nav('other') %>">
+        <%= link_to user_cards_path(@user, nav_info: "other") do %>
+        <i class="fa fa-cubes"></i>
+        <span class="nav-label">その他</span>
+        <span class="label label-default pull-right">
+          <%= card_counter("other") %>
+        </span>
+        <% end %>
+      </li>
+      </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  $('.nav-header').imgLiquid();
+</script>

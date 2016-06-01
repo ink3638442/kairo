@@ -1,0 +1,25 @@
+<div class="row groups-show">
+  <div class="groups">
+    <div class="left-window col-md-6">
+      <div class="full-height-scroll">
+        <%= render 'groups/group/group_show', group: @group %>
+        <%= will_paginate @pages %>
+        <ol class="pages clear-padding">
+          <% @pages.each do |page| %>
+            <%= render 'pages/group/page', page: page %>
+          <% end %>
+        </ol>
+        <%= will_paginate @pages %>
+      </div>
+    </div>
+    <div class="right-window col-md-6">
+      <div class="full-height-scroll">
+        <ol class="threads clear-padding">
+          <% ["初めての方はこちら","更新情報","エラー報告","Q＆A","部品対応表","購入先情報","勉強会日程","参考資料"].each do |thread| %>
+            <%= render 'group_threads/thread', title: thread %>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

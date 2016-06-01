@@ -1,0 +1,13 @@
+<div class="page-info">
+  <% if card.page_id.present? %>
+    &nbsp;
+    <%= link_to card.page do %>
+      <i class="second fa fa-th-large"></i>
+      [ <%= card.page.title %> ]
+    <% end %>
+  <% else %>
+    &nbsp;
+    <i class="second fa fa-th-large"></i>
+    [ 該当ページなし ]
+  <% end %>
+</div>

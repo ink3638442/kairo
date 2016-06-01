@@ -1,0 +1,37 @@
+<div class="loginColumns animated fadeInDown">
+  <h1>KAIRO</h1>
+  <h3>電子工作共有プラットフォーム</h3>
+  <div>
+      <div class="ibox-content">
+        <h3 class="sign_up">ユーザー登録</h3>
+        <hr>
+        <%= form_for(@user, html: { multipart: true }) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <%= f.label :name, "ユーザー名", class: "form-label" %>
+          <%= f.text_field :name, class: "form-control" %>
+    
+          <%= f.label :email, "メールアドレス", class: "form-label" %>
+          <%= f.email_field :email, class: "form-control" %>
+    
+          <%= f.label :password, "パスワード", class: "form-label" %>
+          <%= f.password_field :password, class: "form-control" %>
+    
+          <%= f.label :password_confirmation, "パスワード（確認）", class: "form-label" %>
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+    
+          <%= f.submit "登録", class: "btn btn-success block full-width m-b submit-margin" %>
+        <% end %>
+        <!--<a href="#"><small>Forgot password?</small></a>-->
+
+        <p class="text-muted text-center">
+            <!--<small>アカウントをお持ちですか？</small>-->
+        </p>
+          <%= link_to "ログイン", login_path, class: "btn btn-sm btn-white btn-block" %>
+      </div>
+      
+      <div class="pv" >
+        <%= link_to '>> KAIRO 紹介動画', "https://vimeo.com/168953107", class: "text-color" %>
+      </div>
+      
+  </div>
+</div>
