@@ -33,8 +33,6 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'hirb'
   gem 'hirb-unicode'
-  gem 'pry-byebug'
-  gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails-footnotes'
