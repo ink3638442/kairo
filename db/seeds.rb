@@ -143,51 +143,51 @@ end
 #####################################
 #プロセス3
 #####################################
-10.times do |n|
-  10.times do |m|#10ページ分作成
-    10.times do |c| #10カード作成
-      if c == 0
-        image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{n*2+21}.jpg")
-      elsif c == 2
-        image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{n*2+22}.jpg")
-      elsif c == 1 || c == 3 || c == 5 || c == 6
-        image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{Random.rand(1 .. 40)}.jpg")
-      elsif c == 4
-        image_path = File.join(Rails.root, "db/fixtures/glaph/", "#{Random.rand(1 .. 40)}.jpg")
-      else
-        image_path = File.join(Rails.root, "db/fixtures/program/", "#{Random.rand(1 .. 40)}.js")
-      end
-      if m == 0 #bot 
-        Card.create!(image: File.new(image_path), user_id: 1, page_id: 10*n+101, kind: kinds[c], title: kinds[c], content: content_short)
-      else #bot以外のメンバー
-        Card.create!(image: File.new(image_path), user_id: n+1+m*10, page_id: 10*n+m+101, kind: kinds[c], title: "#{kinds[c]}-#{n+1+m*10}", content: content_short)
-      end
-    end
-  end
-end
+# 10.times do |n|
+#   10.times do |m|#10ページ分作成
+#     10.times do |c| #10カード作成
+#       if c == 0
+#         image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{n*2+21}.jpg")
+#       elsif c == 2
+#         image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{n*2+22}.jpg")
+#       elsif c == 1 || c == 3 || c == 5 || c == 6
+#         image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{Random.rand(1 .. 40)}.jpg")
+#       elsif c == 4
+#         image_path = File.join(Rails.root, "db/fixtures/glaph/", "#{Random.rand(1 .. 40)}.jpg")
+#       else
+#         image_path = File.join(Rails.root, "db/fixtures/program/", "#{Random.rand(1 .. 40)}.js")
+#       end
+#       if m == 0 #bot 
+#         Card.create!(image: File.new(image_path), user_id: 1, page_id: 10*n+101, kind: kinds[c], title: kinds[c], content: content_short)
+#       else #bot以外のメンバー
+#         Card.create!(image: File.new(image_path), user_id: n+1+m*10, page_id: 10*n+m+101, kind: kinds[c], title: "#{kinds[c]}-#{n+1+m*10}", content: content_short)
+#       end
+#     end
+#   end
+# end
 #####################################
 #プロセス4
 #####################################
-10.times do |n| #残り分
-  10.times do |m|#10ページ分作成
-    i = 40 #description jpg +2
-    p = 200 #ページID補正 +10
-    10.times do |c| #10カード作成
-      if c == 0
-        image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{i+(2*n)+1}.jpg")
-      elsif c == 2
-        image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{i+(2*n)+2}.jpg")
-      elsif c == 1 || c == 3 || c == 5 || c == 6
-        image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{Random.rand(1 .. 40)}.jpg")
-      elsif c == 4
-        image_path = File.join(Rails.root, "db/fixtures/glaph/", "#{Random.rand(1 .. 40)}.jpg")
-      else
-        image_path = File.join(Rails.root, "db/fixtures/program/", "#{Random.rand(1 .. 40)}.js")
-      end
-      Card.create!(image: File.new(image_path), user_id: n*10 + m+1, page_id: p+n*10+m+1, kind: kinds[c], title: "#{kinds[c]}-#{n*10 + m+1}", content: content_short)
-    end
-  end
-end
+# 10.times do |n| #残り分
+#   10.times do |m|#10ページ分作成
+#     i = 40 #description jpg +2
+#     p = 200 #ページID補正 +10
+#     10.times do |c| #10カード作成
+#       if c == 0
+#         image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{i+(2*n)+1}.jpg")
+#       elsif c == 2
+#         image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{i+(2*n)+2}.jpg")
+#       elsif c == 1 || c == 3 || c == 5 || c == 6
+#         image_path = File.join(Rails.root, "db/fixtures/#{kinds[c]}/", "#{Random.rand(1 .. 40)}.jpg")
+#       elsif c == 4
+#         image_path = File.join(Rails.root, "db/fixtures/glaph/", "#{Random.rand(1 .. 40)}.jpg")
+#       else
+#         image_path = File.join(Rails.root, "db/fixtures/program/", "#{Random.rand(1 .. 40)}.js")
+#       end
+#       Card.create!(image: File.new(image_path), user_id: n*10 + m+1, page_id: p+n*10+m+1, kind: kinds[c], title: "#{kinds[c]}-#{n*10 + m+1}", content: content_short)
+#     end
+#   end
+# end
 # #####################################
 # #プロセス5
 # #####################################
@@ -211,9 +211,9 @@ end
 # #####################################
 # #プロセス6
 # #####################################
-300.times do |n| #300#100
-  page = Page.find(n+1)
-  card_order = [10*n+1, 10*n+2, 10*n+3, 10*n+4, 10*n+5, 10*n+6, 10*n+7, 10*n+8, 10*n+9, 10*n+10]
-  page.card_order = card_order
-  page.save
-end
+# 300.times do |n| #300#100
+#   page = Page.find(n+1)
+#   card_order = [10*n+1, 10*n+2, 10*n+3, 10*n+4, 10*n+5, 10*n+6, 10*n+7, 10*n+8, 10*n+9, 10*n+10]
+#   page.card_order = card_order
+#   page.save
+# end
