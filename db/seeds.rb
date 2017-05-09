@@ -192,19 +192,19 @@ end
 # #プロセス5
 # #####################################
 100.times do |n|
-  50.times do |r|
-    if r<10
+  20.times do |r|
+    if r<5
       image_path = File.join(Rails.root, "db/fixtures/breadboard/", "#{Random.rand(1 .. 40)}.jpg")
-      Card.create!(image: File.new(image_path), user_id: n+1, kind: "breadboard", title: "breadboard-#{n+1}", content: content_short)
-    elsif r>=10 && r<20
+      Card.create!(image: File.new(image_path), user_id: n+1, kind: "breadboard", title: "breadboard-#{n+1}", content: content_short, pick_up: true)
+    elsif r>=5 && r<10
       image_path = File.join(Rails.root, "db/fixtures/circuit/", "#{Random.rand(1 .. 40)}.jpg")
-      Card.create!(image: File.new(image_path), user_id: n+1, kind: "circuit", title: "circuit-#{n+1}", content: content_short)
-    elsif r>=20 && r<30
+      Card.create!(image: File.new(image_path), user_id: n+1, kind: "circuit", title: "circuit-#{n+1}", content: content_short, pick_up: true)
+    elsif r>=10 && r<15
       image_path = File.join(Rails.root, "db/fixtures/element_list/", "#{Random.rand(1 .. 40)}.jpg")
-      Card.create!(image: File.new(image_path), user_id: n+1, kind: "element_list", title: "element_list-#{n+1}", content: content_short)
+      Card.create!(image: File.new(image_path), user_id: n+1, kind: "element_list", title: "element_list-#{n+1}", content: content_short, pick_up: true)
     else
       image_path = File.join(Rails.root, "db/fixtures/dummy/", "#{Random.rand(1 .. 40)}.jpg")
-      Card.create!(image: File.new(image_path), user_id: n+1, kind: "description", title: "description-#{n+1}", content: content_short)
+      Card.create!(image: File.new(image_path), user_id: n+1, kind: "description", title: "description-#{n+1}", content: content_short, pick_up: true)
     end
   end
 end
