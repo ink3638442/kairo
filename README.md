@@ -6,7 +6,7 @@ https://kairo.herokuapp.com/login
 https://techacademy.jp/blog/37
 
 
-### 機能紹介動画
+#### 機能紹介動画
 https://vimeo.com/216667186
 
 #### プロモーション動画
